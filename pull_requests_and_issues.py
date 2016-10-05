@@ -243,7 +243,7 @@ def write_output(file, is_pr, issues):
             f.write(str(item['title'].encode('utf-8')) + "\t")
             f.write(str(item['created_at']).replace('T', ' ').replace('Z', '') + "\t")
             # replace the API link with the WWW link
-            url = item['url'].replace('https://api.github.com/', 'https://www.github.com/')
+            url = item['url'].replace('https://api.github.com/repos/', 'https://www.github.com/')
             f.write(str(url) + "\t")
             f.write(str(item['state']) + "\t")
             f.write("\n")
